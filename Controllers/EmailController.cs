@@ -30,6 +30,7 @@ namespace SimpleEmailApp.Controllers
             smpt.Disconnect(true);
 
             return Ok();
+
         }
     }
 }
