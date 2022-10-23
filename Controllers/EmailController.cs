@@ -10,8 +10,10 @@ namespace SimpleEmailApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class EmailController : ControllerBase
     {
+        [HttpPost]
         public IActionResult SendEmail(string body)
         {
 
@@ -27,6 +29,7 @@ namespace SimpleEmailApp.Controllers
             smpt.Send(email);
             smpt.Disconnect(true);
 
+            return Ok();
         }
     }
 }
